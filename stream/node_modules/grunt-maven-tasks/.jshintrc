@@ -1,0 +1,20 @@
+{
+  "curly":     true,
+  "newcap":    true,
+  "noarg":     true,
+  "eqeqeq":    true,
+  "eqnull":    true,
+  "undef":     true,
+  "nonew":     true,
+  "trailing":  true,
+  "immed":     true,
+  "node":      true,
+  "predef": [
+    "describe",
+    "it",
+    "before",
+    "beforeEach",
+    "after",
+    "afterEach"
+  ]
+}

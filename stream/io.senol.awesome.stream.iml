@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Osmorc" name="OSGi">
+      <configuration manifestGenerationMode="OsmorcControlled" manifestLocation="" jarfileLocation="io.senol.awesome.stream-0.0.1-SNAPSHOT.jar" outputPathType="CompilerOutputPath" bndFileLocation="" bundlorFileLocation="" bundleActivator="" bundleSymbolicName="io.senol.awesome.io.senol.awesome.stream" bundleVersion="0.0.1.SNAPSHOT" ignoreFilePattern="" useProjectDefaultManifestFileLocation="true" alwaysRebuildBundleJAR="false" doNotSynchronizeWithMaven="false">
+        <additionalProperties>
+          <property key="Export-Package" value="io.senol.awesome.stream.*" />
+          <property key="Sling-Initial-Content" value="SLING-INF;overwriteProperties:=true" />
+          <property key="Embed-Dependency" value="jackson-core-asl;scope=compile,jackson-mapper-asl" />
+          <property key="Import-Package" value="org.eclipse.jetty.websocket.server,*" />
+          <property key="Include-Resource" value="OSGI-INF/metatype/metatype.properties=$MODULE_DIR$/src/main/resources/OSGI-INF/metatype/metatype.properties,SLING-INF/.brackets.json=$MODULE_DIR$/src/main/resources/SLING-INF/.brackets.json,SLING-INF/content/awesome/awesome.js=$MODULE_DIR$/src/main/resources/SLING-INF/content/awesome/awesome.js,SLING-INF/content/awesome/manager.js=$MODULE_DIR$/src/main/resources/SLING-INF/content/awesome/manager.js,SLING-INF/content/awesome/ResourceResolver.js=$MODULE_DIR$/src/main/resources/SLING-INF/content/awesome/ResourceResolver.js,SLING-INF/content/awesome/test.html=$MODULE_DIR$/src/main/resources/SLING-INF/content/awesome/test.html,SLING-INF/libs/awesome/3rd-party/q.js=$MODULE_DIR$/src/main/resources/SLING-INF/libs/awesome/3rd-party/q.js,SLING-INF/libs/awesome/api/js.txt=$MODULE_DIR$/src/main/resources/SLING-INF/libs/awesome/api/js.txt,SLING-INF/libs/awesome/api/SlingAwesome.js=$MODULE_DIR$/src/main/resources/SLING-INF/libs/awesome/api/SlingAwesome.js,SLING-INF/libs/awesome/api/SlingAwesome.min.js=$MODULE_DIR$/src/main/resources/SLING-INF/libs/awesome/api/SlingAwesome.min.js,SLING-INF/libs/awesome/api.json=$MODULE_DIR$/src/main/resources/SLING-INF/libs/awesome/api.json,SLING-INF/libs/awesome/Resource.js=$MODULE_DIR$/src/main/resources/SLING-INF/libs/awesome/Resource.js,SLING-INF/libs/awesome/stream.js=$MODULE_DIR$/src/main/resources/SLING-INF/libs/awesome/stream.js,jackson-core-asl-1.9.5.jar=$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-core-asl/1.9.5/jackson-core-asl-1.9.5.jar,jackson-mapper-asl-1.9.5.jar=$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-mapper-asl/1.9.5/jackson-mapper-asl-1.9.5.jar" />
+          <property key="Sling-Bundle-Resources" value="/var/classes" />
+          <property key="Bundle-Name" value="Playing around with sling and jetty" />
+          <property key="Bundle-ClassPath" value=".,jackson-core-asl-1.9.5.jar,jackson-mapper-asl-1.9.5.jar" />
+          <property key="Embedded-Artifacts" value="jackson-core-asl-1.9.5.jar;g=&quot;org.codehaus.jackson&quot;;a=&quot;jackson-core-asl&quot;;v=&quot;1.9.5&quot;,jackson-mapper-asl-1.9.5.jar;g=&quot;org.codehaus.jackson&quot;;a=&quot;jackson-mapper-asl&quot;;v=&quot;1.9.5&quot;" />
+        </additionalProperties>
+        <additionalJARContents />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.osgi:org.osgi.core:4.3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.osgi:org.osgi.compendium:4.3.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.felix:org.apache.felix.scr.annotations:1.9.8" level="project" />
+    <orderEntry type="library" name="Maven: javax.jcr:jcr:2.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-api:2.7.5" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.sling:org.apache.sling.commons.json:2.0.6" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.sling:org.apache.sling.api:2.7.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.sling:org.apache.sling.auth.core:1.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.sling:org.apache.sling.event:3.1.5-R1485539" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.5" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.5" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.jetty.websocket:websocket-servlet:9.1.2.v20140210" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.jetty.websocket:websocket-api:9.1.2.v20140210" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.jetty.websocket:websocket-server:9.1.2.v20140210" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.jetty.websocket:websocket-common:9.1.2.v20140210" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.jetty:jetty-util:9.1.2.v20140210" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.jetty:jetty-io:9.1.2.v20140210" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.jetty.websocket:websocket-client:9.1.2.v20140210" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.jetty:jetty-servlet:9.1.2.v20140210" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.jetty:jetty-security:9.1.2.v20140210" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.jetty:jetty-server:9.1.2.v20140210" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.jetty:jetty-http:9.1.2.v20140210" level="project" />
+  </component>
+</module>
+

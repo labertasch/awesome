@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>${properties.jcr:title}</title>
+    <sly data-sly-call="${clientLib.css @ categories='beagle.sling.awesome'}" data-sly-unwrap/>
+    <sly data-sly-call="${clientLib.js @ categories='beagle.sling.awesome'}" data-sly-unwrap/>
+</head>
+
+<body>
+<h1>${properties.jcr:title}</h1>
+
+
+<script>
+
+    var slingAwesome = new SlingAwesome();
+
+    slingAwesome.resolve("/content/geometrixx/page1").then(function (resource) {
+        console.log(resource.properteis.title);
+
+        resource.listChidlren().then(function (chidlren) {
+
+        })
+
+        resource.listChildren(function (child){
+            console.log(child.title);
+        });
+
+    });
+
+
+    slingAwesome.on("/content/geometrixx/page1", function (event) {
+
+
+    });
+
+    slingAwesome.once("/content/geometrixx/page1", function (event) {
+
+
+    });
+
+
+</script>
+
+
+
+</body>
+</html>

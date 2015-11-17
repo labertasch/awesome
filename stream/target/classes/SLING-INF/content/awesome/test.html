@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Sling Aweseome Resource events</title>
+    <script src="//localhost:35729/livereload.js"></script>
+
+    <script src="/libs/awesome/api/SlingAwesome.js"></script>
+    <script language="javascript" type="text/javascript">
+        var wsUri = "ws://localhost:4502/bin/awesome/stream";
+
+        var output;  
+        function init() { 
+
+            output = document.getElementById("output");
+            testWebSocket();
+
+        }
+
+
+        function testWebSocket() {
+
+            websocket = new WebSocket(wsUri);
+
+            websocket.onopen = function(evt) { onOpen(evt) };
+
+            websocket.onclose = function(evt) { onClose(evt) };
+
+
+            websocket.onmessage = function(evt) { onMessage(evt) };
+
+            websocket.onerror = function(evt) { onError(evt) }; }
+
+        function onOpen(evt) {
+            writeToScreen("CONNECTED");
+            //   onMessage("WebSocket rocks");
+        }
+
+        function onClose(evt) {
+            writeToScreen("DISCONNECTED");
+            testWebSocket();
+
+        }
+
+        function onMessage(evt) {
+            writeToScreen("RESPONSE: " +  evt.data);
+//websocket.close();
+
+        }
+
+
+        function onError(evt) { writeToScreen('<span style="color: red;">ERROR:<\/span> '  + evt.data); }
+
+        function doSend(message) { writeToScreen("SENT: " +  message);  websocket.send(message); }
+
+        function writeToScreen(message) {
+
+            var pre = document.createElement("p");
+            pre.style.wordWrap = "break-word"; pre.innerHTML = message; output.appendChild(pre); }
+
+        window.addEventListener("load", init, false);
+
+
+    </script>
+</head>
+
+<body>
+<h2>Sling Awesome Test Console</h2>
+<input type="text" id="test"><input type="submit" id="sbt">
+<div id="output"></div>
+
+<script>
+    document.getElementById("sbt").onclick = function () {
+        var text = document.getElementById("test").value;
+        doSend(text);
+    }
+
+</script>
+</body>
+</html>

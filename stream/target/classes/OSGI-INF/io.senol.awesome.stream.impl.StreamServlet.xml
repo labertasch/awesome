@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="io.senol.awesome.stream.impl.StreamServlet">
+    <implementation class="io.senol.awesome.stream.impl.StreamServlet"/>
+    <service servicefactory="false">
+        <provide interface="javax.servlet.Servlet"/>
+    </service>
+    <property name="sling.servlet.paths">
+        /bin/awesome/stream
+        /bin/awesome/stream/token.json
+    </property>
+    <property name="service.vendor" value="Adobe Systems Inc."/>
+    <property name="filter.scope" value="request"/>
+    <property name="filter.order" type="Integer" value="-1000000000"/>
+    <property name="service.pid" value="io.senol.awesome.stream.impl.StreamServlet"/>
+    <reference name="resolverFactory" interface="org.apache.sling.api.resource.ResourceResolverFactory" cardinality="1..1" policy="static" bind="bindResolverFactory" unbind="unbindResolverFactory"/>
+    <reference name="streamResourceService" interface="io.senol.awesome.stream.StreamResourceService" cardinality="1..1" policy="static" bind="bindStreamResourceService" unbind="unbindStreamResourceService"/>
+</scr:component>

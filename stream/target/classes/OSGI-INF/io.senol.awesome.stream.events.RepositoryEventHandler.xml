@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="io.senol.awesome.stream.events.RepositoryEventHandler">
+    <implementation class="io.senol.awesome.stream.events.RepositoryEventHandler"/>
+    <service servicefactory="false">
+        <provide interface="org.osgi.service.event.EventHandler"/>
+    </service>
+    <property name="event.topics">
+        org/apache/sling/api/resource/Resource/ADDED
+        org/apache/sling/api/resource/Resource/CHANGED
+        org/apache/sling/api/resource/Resource/REMOVED
+    </property>
+    <property name="service.pid" value="io.senol.awesome.stream.events.RepositoryEventHandler"/>
+    <reference name="streamResourceService" interface="io.senol.awesome.stream.StreamResourceService" cardinality="1..1" policy="static" bind="bindStreamResourceService" unbind="unbindStreamResourceService"/>
+</scr:component>

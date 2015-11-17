@@ -1,0 +1,5 @@
+{
+    "jcr:primaryType" : "nt:unstructured",
+    "sling:resourceType" : "awesome/demo",
+    "jcr:title": "SlingAwesome Demo"
+}
